@@ -1,0 +1,20 @@
+read_verilog -sv -formal -overwrite {workspace}/user/src/clk_and_rst/clk_and_rst.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/ov5640_top/ov5640_top.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/ov5640_top/camera_init/camera_init.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/ov5640_top/camera_init/iic/iic_control.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/ov5640_top/camera_init/iic/iic_tim_gen.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/ov5640_top/camera_init/ov5640_init_table_rgb.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/ov5640_top/camera_init/ov5640_init_table_jpeg.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/ov5640_top/dvp_capture/dvp_capture.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/sdram_top/sdram_top.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/sdram_top/sdram_wr_rd_fifo/sdram_wr_rd_fifo.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/sdram_top/sdram_interface/sdram_interface.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/sdram_top/sdram_interface/sdram_init.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/sdram_top/sdram_interface/sdram_arbiter.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/sdram_top/sdram_interface/sdram_auto_refresh.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/sdram_top/sdram_interface/sdram_write.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/sdram_top/sdram_interface/sdram_read.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/tft_disp/tft_disp.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/ov5640_tft_480x272.v
+design -reset-vlog; proc;
+write_json {workspace}/prj/netlist/ov5640_tft_480x272.json

@@ -1,0 +1,6 @@
+read_verilog -sv -formal -overwrite {workspace}/user/src/sdram/sdram_interface/sdram_init.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/sdram/sdram_interface/sdram_arbiter.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/sdram/sdram_interface/sdram_auto_refresh.v
+read_verilog -sv -formal -overwrite {workspace}/user/src/sdram/sdram_interface/sdram_interface.v
+design -reset-vlog; proc;
+write_json {workspace}/prj/netlist/sdram_interface.json

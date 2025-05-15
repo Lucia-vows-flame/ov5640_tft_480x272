@@ -1,0 +1,3 @@
+read_verilog -sv -formal -overwrite {workspace}/user/src/sdram/sdram_wr_rd_fifo/sdram_wr_rd_fifo.v
+design -reset-vlog; proc;
+write_json {workspace}/prj/netlist/sdram_wr_rd_fifo.json
